@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+    	Doctor Appointment
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/calendar.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row instructions">
+            <div>
+                <h1 class="text-center">Life Care Diabetes Specialitys</h1>
+		        <h2 class="text-center">Dr. A. Jeswanth</h2>
+		        <h4 class="text-center">Ramalingeshwara Pet, Dist. Guntur, Tenali</h4><br>
+                <h3 class="text-center">Appointment Scheduler</h3><br>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>Book your Appointment here!</h3>
+                <form>
+                    <div class="form">
+                        <div class="col form-group">
+                            <label>Name</label>
+                            <input class="form-control" placeholder="name" type="text" id="name">
+                        </div>                        
+                        <div class="col form-group">
+                            <label>Date</label>
+                            <input class="form-control date-input" type="text" placeholder="dd/mm/yyyy" id="date">
+                        </div>
+                        <div class="col form-group">
+                            <label>Time</label>
+                            <input class="form-control time-input" type="text" placeholder="hh:mm (24h)" id="time">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <button type="button" class="btn btn-warning btn-block" id="clear" onclick={clear_input()}>Clear Form</button>
+                        </div>
+                        <div class="col form-group">
+                            <button type="submit" class="btn btn-primary btn-block" id="submit" onclick={make_appointment()}> Book Appointment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col offset-md-1">
+                <div class="row">
+                    <div class="col">
+                        <h3>Appointments</h3>
+                    </div>
+                    <div class="col form-group">
+                        <button type="button" class="btn btn-danger btn-block" id="btn_clear_storage" onclick="clear_storage()">Clear Appointments</button>
+                    </div>
+                </div>
+                <table class="table table-bordered table-hover table-striped table-sm" id="appointment_list">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" class="text-center align-middle">Date</th>
+                            <th scope="col" class="text-center align-middle">Time</th>
+                            <th scope="col" class="text-center align-middle">Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <script src="js/main.js"></script>
+</html>
